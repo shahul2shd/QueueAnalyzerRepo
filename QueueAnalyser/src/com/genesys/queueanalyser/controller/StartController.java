@@ -22,7 +22,7 @@ public class StartController {
 	public @ResponseBody String gotoStart(ModelMap model, HttpServletRequest request)
 	{
 		log.info("SDSdsdadas");
-		System.out.println("Called start controller");
+		System.out.println("Called start controller123");
 		return "login";
 	}
 }
