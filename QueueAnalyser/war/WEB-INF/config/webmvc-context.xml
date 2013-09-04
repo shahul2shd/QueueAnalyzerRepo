@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+						   http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+						   
+  
+ 	
+ 
+	 <bean id="wsSessionCleanupScheduler" class="com.bostonglobe.ess.ivrservices.util.RestAPISessionCleanupScheduler"/>
+	 
+	 <bean id="appConfigLoader" class="com.bostonglobe.ess.util.ApplicationConfigLoader" init-method="init"/>
+
+	 
+	<bean class="org.springframework.scheduling.concurrent.ScheduledExecutorFactoryBean">
+	    <property name="scheduledExecutorTasks">
+	        <list>
+	            <bean class="org.springframework.scheduling.concurrent.ScheduledExecutorTask">
+	                <property name="period" value="2700000"/>
+	                <property name="runnable">
+	                    <bean class="org.springframework.scheduling.support.MethodInvokingRunnable">
+	                        <property name="targetObject" ref="wsSessionCleanupScheduler"/>
+	                        <property name="targetMethod" value="execute"/> 
+	                    </bean>
+	                </property>
+	            </bean>
+	        </list>
+	    </property>
+	</bean> 
+	
+	 <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	 <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	   <property name="basename" value="classpath:messages" />
+	 </bean>
+	 
+	 <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+	  <property name="velocityProperties">
+	   <value>
+	    resource.loader=class
+	    class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+	   </value>
+	  </property> 
+	</bean>
+	  
+	  	 
+</beans>

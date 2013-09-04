@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/WEB-INF/pages/layout/layout.jsp">
+		<put-attribute name="title" value="FrameWork" />
+		<!-- <put-attribute name="header" value="/WEB-INF/pages/layout/header.jsp" /> -->
+ 		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/pages/layout/footer.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="Login"/>
+		<put-attribute name="body" value="/WEB-INF/pages/login/home.jsp" />	
+	</definition>
+	
+	<!-- <definition name="loginform" template="/WEB-INF/pages/login/loginPage.jsp">
+		<put-attribute name="title" value="Sign in" />
+	</definition> -->
+	
+	<!-- <definition name="updateschedule" extends="baseLayout">
+		<put-attribute name="title" value="Update Schedule page" />
+ 		<put-attribute name="body" value="/WEB-INF/pages/schedule/updateschedule.jsp" />
+	</definition>
+	
+	<definition name="uploadschedule" extends="baseLayout">
+		<put-attribute name="title" value="Upload Schedule File" />
+ 		<put-attribute name="body" value="/WEB-INF/pages/schedule/uploadschedule.jsp" />
+	</definition>
+	
+	<definition name="changeprofile" extends="baseLayout">
+		<put-attribute name="title" value="Change Profile Details" />
+ 		<put-attribute name="body" value="/WEB-INF/pages/settings/changeprofile.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="validUser" extends="baseLayout">
+		<put-attribute name="title" value="Home" />	
+ 		<put-attribute name="body" value="/WEB-INF/pages/login/home.jsp" />
+	</definition>
+	
+	<definition name="callDetailReports" extends="baseLayout">
+		<put-attribute name="title" value="Detailed Call Report" />
+ 		<put-attribute name="body" value="/WEB-INF/pages/reports/callDetailReports.jsp" />
+	</definition>
+	
+	<definition name="scheduleDetailReports" extends="baseLayout">
+		<put-attribute name="title" value="Schedule Detail Report" />
+ 		<put-attribute name="body" value="/WEB-INF/pages/reports/scheduleDetailReports.jsp" />
+	</definition>
+
+	<definition name="logout" extends="baseLayout">
+		<put-attribute name="title" value="Log out" />
+		<put-attribute name="body" value="/WEB-INF/pages/login/loginForm.jsp" />
+	</definition>
+	
+	<definition name="sessionExpired" extends="baseLayout">
+		<put-attribute name="title" value="Session Expired" />
+		<put-attribute name="body" value="/WEB-INF/pages/login/sessionExpired.jsp" />
+	</definition>
+	
+	<definition name="user" extends="baseLayout">
+		<put-attribute name="title" value="User" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/user/user.jsp" />
+ 	</definition> 
+ 	
+ 	<definition name="usersList" extends="baseLayout">  
+		<put-attribute name="title" value="UsersList" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/user/usersList.jsp" />
+ 	</definition> 
+	
+	<definition name="createUserPage" extends="baseLayout">  
+		<put-attribute name="title" value="CreateUser " /> 
+		<put-attribute name="body" value="/WEB-INF/pages/user/createUserPage.jsp" />
+ 	</definition> 
+ 	
+	<definition name="validUser1" extends="baseLayout">
+		<put-attribute name="title" value="My Account" />
+		<put-attribute name="body" value="/WEB-INF/pages/login/validUser.jsp" />
+	</definition>
+	
+	<definition name="accessDenied" extends="baseLayout">
+		<put-attribute name="title" value="Access denied" />
+		<put-attribute name="body" value="/WEB-INF/pages/login/accessDenied.jsp" />
+	</definition> 
+   
+  <definition name="forgotpassword" extends="baseLayout">
+	 <put-attribute name="title" value="Forgot Password" />
+	 <put-attribute name="body" value="/WEB-INF/pages/login/forgotPassword.jsp" />
+  </definition>
+   
+  <definition name="roleList" extends="baseLayout">  
+		<put-attribute name="title" value="RoleList" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/role/roleList.jsp" />
+  </definition> 
+ 	
+  <definition name="createRolePage" extends="baseLayout">  
+		<put-attribute name="title" value="Create Role" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/role/createRolePage.jsp" />
+  </definition>
+  
+  <definition name="clientsList" extends="baseLayout">  
+		<put-attribute name="title" value="All Clients" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/client/clientList.jsp" />
+  </definition>
+  
+  <definition name="createClient" extends="baseLayout">  
+		<put-attribute name="title" value="New Client" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/client/createClient.jsp" />
+  </definition>
+  
+  <definition name="logoImageUpload" template="/WEB-INF/pages/client/logoImageUpload.jsp"></definition>
+  
+  <definition name="clientSettings" extends="baseLayout">  
+		<put-attribute name="title" value="Client Settings" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/client/clientSettings.jsp" />
+  </definition>
+  
+    <definition name="activeDirectoryServices" extends="baseLayout">  
+		<put-attribute name="title" value="Active Directory Services" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/activeDirectoryServices/activeDirectoryServices.jsp" />
+  </definition>
+   
+   <definition name="reports" extends="baseLayout">  
+		<put-attribute name="title" value="Reports Section" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/reports/reports.jsp" />
+  </definition>
+  
+  <definition name="showEventLogsPage" extends="baseLayout">  
+		<put-attribute name="title" value="Event Logs" /> 
+		<put-attribute name="body" value="/WEB-INF/pages/events/eventLogs.jsp" />
+  </definition> -->
+ 
+</tiles-definitions>
